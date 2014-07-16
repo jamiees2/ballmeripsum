@@ -12,23 +12,48 @@
 	
 <body>
 	<div class="container">
-		<img class="center" alt="" src="img/ballmer.jpg" >
+		<h1 class="text-center">The Steve Ballmer Ipsum Generator</h1>
+		<small class="text-center block">Or BallmerIpsum</small>
+		<img class="img-responsive center" alt="" src="img/ballmer.jpg" >
+		<h3 class="text-center">How much steve would you like?</h3>
+		<div class="form center">
 
-		<h4>How much steve would you like?</h4>
-
-		<form id="ipsum-form" action="#" method="post">
-			Paragraphs: <input id="paragraph_count" type="number" maxlength="2" value="5"/><br>
-			Type:
-			<input id="all" type="radio" name="choice" value="all" checked />
-			<label for="all">All</label> 
-			<input id="quotes" type="radio" name="choice" value="quotes" />
-			<label for="quotes">Quotes only</label> 
-			<input id="words" type="radio" name="choice" value="words" />
-			<label for="words">Words only</label><br>
-			<input class="btn btn-danger" type="submit" id="submit" value="Submit" />
-		</form>
-
-		<div id="print-paragraphs"></div>
+			<form class="form-horizontal" id="ipsum-form" action="#" method="post">
+				<div class="form-group">
+					<label for="paragraph_count" >Paragraphs: </label>
+					<input class="form-control" id="paragraph_count" type="number" maxlength="2" value="5"/>
+				</div>
+				<div class="form-group">
+					<div class="radio">
+						<label>
+							<input id="all" type="radio" name="choice" value="all" checked />
+							All
+						</label> 
+					</div>
+					<div class="radio">
+						<label>
+							<input id="quotes" type="radio" name="choice" value="quotes" />
+							Quotes only
+						</label> 
+					</div>
+					<div class="radio">
+						<label>
+							<input id="words" type="radio" name="choice" value="words" />
+							Words only
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<input class="btn btn-danger" type="submit" id="submit" value="Get Ipsum" />
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" id="print-paragraphs"></div>
+		</div>
 	</div>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/ipsum.js"></script>

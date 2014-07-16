@@ -2,3 +2,9 @@
   display: block;
   margin: 0 auto;
 }
+.form {
+	width: 33%;
+}
+.block {
+	display: block;
+}

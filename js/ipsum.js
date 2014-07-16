@@ -41,7 +41,9 @@ $(document).ready(function(){
       "linux is a cancer",
       "i've got my kids brainwashed",
       "there's no chance that the iPhone is going to get any significant market share",
-      "windows will be everywhere"
+      "windows will be everywhere",
+      "most people steal music",
+      "linux is not in the public domain"
     ];
     var words = [
       "windows",
@@ -52,7 +54,13 @@ $(document).ready(function(){
       "innovation",
       "leadership",
       "winning",
-      "Whoo!"
+      "Whoo!",
+      "vista",
+      "windows phone",
+      "bing",
+      "outlook",
+      "word",
+      "excel"
     ];  
     var all = quotes.concat(words);
 
