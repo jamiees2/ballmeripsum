@@ -59,8 +59,9 @@ $(document).ready(function(){
       "windows phone",
       "bing",
       "outlook",
-      "word",
-      "excel"
+      "microsoft word",
+      "microsoft excel",
+      "powerpoint presentation"
     ];  
     var all = quotes.concat(words);
 
