@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Flatiron Ipsum</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+	
+<body>
+	<div class="container">
+		<img class="center" alt="" src="img/ballmer.jpg" >
+
+		<h4>How much steve would you like?</h4>
+
+		<form id="ipsum-form" action="#" method="post">
+			Paragraphs: <input id="paragraph_count" type="number" maxlength="2" value="5"/><br>
+			Type:
+			<input id="straight-up" type="radio" name="choice" value="all" checked />
+			<label for="straight-up">All</label> 
+			<input id="all-bob" type="radio" name="choice" value="quotes" />
+			<label for="all-bob">Quotes only</label> 
+			<input id="no-bob" type="radio" name="choice" value="words" />
+			<label for="no-bob">Words only</label><br>
+			<input class="btn btn-danger" type="submit" id="submit" value="Submit" />
+		</form>
+
+		<div id="print-paragraphs"></div>
+	</div>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/ipsum.js"></script>
+
+</body>
+</html>
