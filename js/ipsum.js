@@ -80,7 +80,7 @@ $(document).ready(function(){
         for ( var x = 0; x < strings.length; x++ ) {
 
           //Create a variable for the randomized array of words
-          var strings_random = fisherYates(strings);
+          var strings_random = fisherYates(strings).slice(0,Math.random() * 6 + 4);
 
           //Convert array to string with no commas or quotes, add period to end
           var sentence = strings_random.toString().replace(/,/g, ' ') + '. ';
