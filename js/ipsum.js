@@ -68,17 +68,21 @@ $(document).ready(function(){
     var strings = [];
 
     //ELSE IF determines which array of words to show the user
-    if (chosen_button == "all") {
+    if (chosen_button === "all") {
       strings = all;
-    } else if (chosen_button == "quotes") {
+    } else if (chosen_button === "quotes") {
       strings = quotes; 
+    } else if (chosen_button === "developers") {
+      strings = [
+        "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS","DEVELOPERS", "DEVELOPERS",
+        "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS", "DEVELOPERS","DEVELOPERS", "DEVELOPERS"
+      ]
     } else {
       strings = words; 
     }
 
     //Vary the number of sentences in each paragraph randomly
     var sentence_number = Math.floor( (Math.random()+2) * 2 );
-    console.log(sentence_number)
 
 
     //Start the first FOR loop that builds sentences from words
@@ -91,7 +95,8 @@ $(document).ready(function(){
         for ( var x = 0; x < strings.length; x++ ) {
 
           //Create a variable for the randomized array of words
-          var strings_random = fisherYates(strings).slice(0,Math.random() * 6 + 4);
+          var strings_random = fisherYates(strings)
+          if(chosen_button !== "developers") strings_random = strings_random.slice(0,Math.random() * 6 + 4);
 
           //Convert array to string with no commas or quotes, add period to end
           var sentence = strings_random.toString().replace(/,/g, ' ') + '. ';
