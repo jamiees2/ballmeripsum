@@ -17,6 +17,43 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+
+
+//A list of quotes and words
+var quotes = [
+  "DEVELOPERS", 
+  "developers, developers, developers, developers, developers, developers, developers, developers, developers, developers, developers", 
+  "no i do not have an ipod",
+  "i don't know what a monopoly is",
+  "i have never, honestly, thrown a chair in my life",
+  "google is not a real company",
+  "linux is a cancer",
+  "i've got my kids brainwashed",
+  "there's no chance that the iPhone is going to get any significant market share",
+  "windows will be everywhere",
+  "most people steal music",
+  "linux is not in the public domain"
+];
+var words = [
+  "windows",
+  "Zune",
+  "programming",
+  "open source",
+  "hotmail",
+  "innovation",
+  "leadership",
+  "winning",
+  "Whoo!",
+  "vista",
+  "windows phone",
+  "bing",
+  "outlook",
+  "microsoft word",
+  "microsoft excel",
+  "powerpoint presentation"
+];  
+var all = quotes.concat(words);
+
 $(document).ready(function(){
   $("#ipsum-form").submit(function() { 
     var paragraphs = '';
@@ -30,45 +67,10 @@ $(document).ready(function(){
     //Define var words as an empty array
     var strings = [];
 
-    //A list of quotes and words
-    var quotes = [
-      "DEVELOPERS", 
-      "developers, developers, developers, developers, developers, developers, developers, developers, developers, developers, developers", 
-      "no i do not have an ipod",
-      "i don't know what a monopoly is",
-      "i have never, honestly, thrown a chair in my life",
-      "google is not a real company",
-      "linux is a cancer",
-      "i've got my kids brainwashed",
-      "there's no chance that the iPhone is going to get any significant market share",
-      "windows will be everywhere",
-      "most people steal music",
-      "linux is not in the public domain"
-    ];
-    var words = [
-      "windows",
-      "Zune",
-      "programming",
-      "open source",
-      "hotmail",
-      "innovation",
-      "leadership",
-      "winning",
-      "Whoo!",
-      "vista",
-      "windows phone",
-      "bing",
-      "outlook",
-      "microsoft word",
-      "microsoft excel",
-      "powerpoint presentation"
-    ];  
-    var all = quotes.concat(words);
-
     //ELSE IF determines which array of words to show the user
     if (chosen_button == "all") {
       strings = all;
-    } else if (chosen_button == "all-bob") {
+    } else if (chosen_button == "quotes") {
       strings = quotes; 
     } else {
       strings = words; 
